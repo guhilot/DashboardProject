@@ -1,0 +1,98 @@
+body{
+  margin:0;
+}
+
+.nav{
+  display: flex;
+  background: rgb(44, 143, 224);
+  padding: 1.5em;
+  justify-content: flex-start;
+  color: black;
+}
+
+li{
+  padding: 0 3em;
+  color: black;
+}
+
+
+h2{
+  margin-top:3em;
+  text-align: left;
+  color: black;
+}
+
+.box:hover{
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  background: rgba(44, 143, 224, 0.15)
+}
+.box:after{
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.box{
+  margin-left: 4em;
+  margin-top:1em;
+  background: rgba(236, 170, 48, 0.753)
+}
+.box>p{
+  margin-top: 3em;
+  text-align: left;
+}
+
+.container{
+  height: 92vh;
+
+}
+
+
+.dContainer > .dd{
+  height: 2em;
+}
+.box > .dd{
+  height: 2em;
+}
+
+.row{
+  height: 24em;
+}
+
+.iform{
+  margin-top: 7em;
+  height: 10em;
+}
+
+.btn{
+  width:10em;
+  margin-top:0.5em;
+  margin-left:9em;
+}
+
+
+@media all and (max-width:768px){
+  .row > div[class^='col'] {
+  height: 18em;
+  border: 1px solid rgb(161, 57, 57);
+  color: rgb(46, 167, 22);
+
+  }
+}
+
+@media all and (max-width:600px){
+  .row > div[class^='col'] {
+  height: 12em;
+  border: 1px solid rgb(161, 57, 57);
+  color: rgb(46, 167, 22);
+  margin-top:2em;
+
+  }
+}
+
+@media all and (max-width:500px){
+  .row > div[class^='col'] {
+  height: 8em;
+  border: 1px solid rgb(161, 57, 57);
+  color: rgb(46, 167, 22);
+  margin-top:2em;
+  }
+}
+
