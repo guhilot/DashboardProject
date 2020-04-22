@@ -5,7 +5,7 @@ import '../App.css';
 
 function Crypto(){
 
-    const {newCoinData, moreCoinData} = useContext(Context)
+    const {newCoinData, moreCoinData, extraData} = useContext(Context)
 
     return(
         <div className="container">
@@ -23,7 +23,14 @@ function Crypto(){
                     </div>
                     {moreCoinData}
                 </div>
-                <div className="col-lg-5 box">Sample</div>
+                <div className="col-lg-5 box">
+                    <div className="row dd">
+                        <div className="col-sm-1 ">ID</div>
+                        <div className="col-sm-7 ">Time Stamp</div>
+                        <div className="col-sm-4 ">Capital</div>
+                    </div>
+                    {extraData}
+                </div>
             </div>
         </div>
     )
