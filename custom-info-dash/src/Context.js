@@ -13,8 +13,10 @@ function ContextProvider(props){
 
     const [url, setURL] = useState("")
     const [coinData, setCoinData] = useState([])
+    const [country, setCountry] = useState("")
     const [countryData, setCountryData] = useState([])
-    //const [newCountry, setNewCont] = useState([])
+    const [countryInfo, setCountryInfo] = useState([])
+    const [flag, setFlag] = useState("")
 
     /**
      * url for fetching data
@@ -33,6 +35,11 @@ function ContextProvider(props){
         let att = addr.concat(upper)
         setURL(att)
     }
+
+    function processCountry(nom){
+        let upper = nom.charAt(0).toUpperCase() + nom.slice(1)
+        setCountry(upper)
+    }
     /**
      * exectues whenever there is a change to url to fetch new data
      */
@@ -50,31 +57,62 @@ function ContextProvider(props){
             .then(data=>setCountryData([data]))
     },[])
 
-    // const {Response} = countryData
+    // const hold = countryData.map(region=>{
+    //     return region.Response.map((place,i)=>{
+    //         return { 
+    //                         "id": i,
+    //                         "Name":place.Name,
+    //                         "RegName":place.NativeName,
+    //                         "Lang":place.NativeLanguage,
+    //                         "Region":place.Region,
+    //                         "Lon":place.Longitude,
+    //                         "Lat":place.Latitude,
+    //                         "flag":place.Flag,
+    //                         "curr":place.CurrencyCode,
+    //                         "currSymbol":place.CurrencySymbol
+    //                 }       
+    //     })
+    // })
 
-    // useEffect(()=>{
-    //     setNewCont([Response])
-    // },[Response])
+    // const valData = countryData.map(city=>{
+    //     return(city.Response.map(place=>{
+    //         if(place.Name === country)
+    //         {
+    //             return (
+    //                 <div className="container">
+    //                     <h4>{place.Name}</h4>
+    //                     <h5>{place.Region}</h5>
+    //                 </div>
+                    
+    //             )
+    //         }
+    //     })
+    //     )
+    // })
 
+    useEffect(()=>{
+         setCountryInfo(countryData.map(place=>{
+            return(place.Response.map(data=>{
+                if(data.Name === country){
+                    return(
+                        <div className="dContainer" >
+                            <div className="row">
+                                <div className="col-sm-3 col-md-3 col-lg-3">{data.Region}</div>
+                                <div className="col-sm-3 col-md-3 col-lg-3">{data.Name}</div>
+                                <div className="col-sm-3 col-md-3 col-lg-3">{data.Longitude}</div>
+                                <div className="col-sm-3 col-md-3 col-lg-3">{data.Latitude}</div>
+                            </div>
+                        </div>
+                    )
+                }
+                return
+            }))
+          })
+         )
+    },[country])
 
-    const country = countryData.map(region=>{
-        return region.Response.map(place=>{
-            return {
-                        "Name":place.Name,
-                        "RegName":place.NativeName,
-                        "Lang":place.NativeLanguage,
-                        "Region":place.Region,
-                        "Lon":place.Longitude,
-                        "Lat":place.Latitude,
-                        "flag":place.Flag,
-                        "curr":place.CurrencyCode,
-                        "currSymbol":place.CurrencySymbol
-                    }
-        })
-    })
-
-    //console.log(country)
-
+    
+   
     /**
      * mapping over coin data to extract needed data using map for dispaly1
      */
@@ -122,6 +160,8 @@ function ContextProvider(props){
             )
           }
     )
+
+
 /**
  * Context Provider as as the source of all info and sends data to
  * which ever component needs it
@@ -133,12 +173,12 @@ function ContextProvider(props){
             newCoinData, 
             moreCoinData, 
             extraData,
-            country
+            countryInfo,
+            processCountry
             }}>
             {props.children}
         </Context.Provider>
     )
-
 }
 
 export {ContextProvider, Context}
