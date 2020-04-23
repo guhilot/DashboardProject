@@ -39,11 +39,15 @@ h2{
   text-align: left;
 }
 
-.container{
-  height: 92vh;
-
+.ima{
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
 }
 
+.container{
+  height: 92vh;
+}
 
 .dContainer > .dd{
   height: 2em;
@@ -53,6 +57,9 @@ h2{
 }
 
 .row{
+  height: 24em;
+}
+.ab{
   height: 24em;
 }
 

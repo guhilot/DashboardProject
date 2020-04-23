@@ -17,6 +17,7 @@ function ContextProvider(props){
     const [countryData, setCountryData] = useState([])
     const [countryInfo, setCountryInfo] = useState([])
     const [flag, setFlag] = useState("")
+    const [moreData, setMoreData] = useState([])
 
     /**
      * url for fetching data
@@ -109,6 +110,43 @@ function ContextProvider(props){
             }))
           })
          )
+
+         setFlag(
+            countryData.map(place=>{
+                return(place.Response.map(data=>{
+                    if(data.Name === country){
+                        return(
+                            <div className="container" >
+                                <div className="row ab">
+                                    <div className="col-sm-12 col-md-12 col-lg-12 ab"><img className="ima" src={data.Flag} alt="flag" height={500} width={400} /></div>
+                                </div>
+                            </div>
+                        )
+                    }
+                    return
+                }))
+              })
+
+         )
+
+         setMoreData(countryData.map(place=>{
+                return(place.Response.map(data=>{
+                    if(data.Name === country){
+                        return(
+                            <div className="dContainer" >
+                                <div className="row">
+                                    <div className="col-sm-3 col-md-3 col-lg-3">{data.NativeLanguage}</div>
+                                    <div className="col-sm-3 col-md-3 col-lg-3">{data.NativeName}</div>
+                                    <div className="col-sm-3 col-md-3 col-lg-3">{data.CurrencyCode}</div>
+                                    <div className="col-sm-3 col-md-3 col-lg-3">{data.CurrencySymbol}</div>
+                                </div>
+                            </div>
+                        )
+                    }
+                    return
+                }))
+              })
+         )
     },[country])
 
     
@@ -174,7 +212,9 @@ function ContextProvider(props){
             moreCoinData, 
             extraData,
             countryInfo,
-            processCountry
+            processCountry,
+            flag,
+            moreData
             }}>
             {props.children}
         </Context.Provider>
