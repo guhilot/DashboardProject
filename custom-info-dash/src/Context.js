@@ -1,3 +1,7 @@
+/**
+ * Vikram Guhilot
+ */
+
 import React, {useEffect, useState} from 'react'
 
 const Context = React.createContext()
@@ -31,7 +35,7 @@ function ContextProvider(props){
     const currencyUrl = "https://currency-exchange.p.rapidapi.com/exchange?q="
     const set2= "&from="
     const set3= "&to="
-    const metalUrl = "https://gold-price-live.p.rapidapi.com/us-central1-metals-app.cloudfunctions.net/rapidapi_get_metal_prices"
+    const metalUrl = "//--block//https://gold-price-live.p.rapidapi.com/us-central1-metals-app.cloudfunctions.net/rapidapi_get_metal_prices"
 
     /**
      * 
@@ -246,19 +250,3 @@ function ContextProvider(props){
 }
 
 export {ContextProvider, Context}
-
-    // const valData = countryData.map(city=>{
-    //     return(city.Response.map(place=>{
-    //         if(place.Name === country)
-    //         {
-    //             return (
-    //                 <div className="container">
-    //                     <h4>{place.Name}</h4>
-    //                     <h5>{place.Region}</h5>
-    //                 </div>
-                    
-    //             )
-    //         }
-    //     })
-    //     )
-    // })

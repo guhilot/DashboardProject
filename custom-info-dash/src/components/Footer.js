@@ -1,3 +1,7 @@
+/**
+ * Vikram Guhilot
+ */
+
 import React from 'react'
 
 function Footer()

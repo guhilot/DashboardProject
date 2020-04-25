@@ -1,3 +1,7 @@
+/**
+ * Vikram Guhilot
+ */
+
 import React, {useContext} from "react"
 import {Context} from "../Context"
 
@@ -57,7 +61,7 @@ function Metal(){
                 <div className="col-sm-5 col-md-5 col-lg-5 box">
                     <div className = "row">
                         <div className = "col-lg-12 b1">
-                            <h1>{metal.palladium}</h1>
+                            <h1>{metal.silver}</h1>
                         </div>
                         <div className = "col-lg-12 b2">
                         <img 

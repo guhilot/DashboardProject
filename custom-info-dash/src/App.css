@@ -1,3 +1,7 @@
+/**
+ * Vikram Guhilot
+ */
+
 body{
   margin:0;
   background-color: antiquewhite;
@@ -26,7 +30,7 @@ h2{
   color: black;
 }
 .fa:after{
- color: blacl
+ color: black
 }
 .box{
   margin-left: 4em;
@@ -41,7 +45,7 @@ h2{
 .ima{
   object-fit: contain;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 100%; 
 }
 
 .row>.b1,.b2{
@@ -114,30 +118,89 @@ color: rgb(31, 34, 31);
 
 
 @media all and (max-width:768px){
-  .row > div[class^='col'] {
-  height: 18em;
-  border: 1px solid rgb(161, 57, 57);
-  color: rgb(46, 167, 22);
+
+  .nav{
+    display: flex;
+    background: rgb(44, 143, 224);
+    padding: 0.75em;
+    justify-content: flex-start;
+  }
+
+  li{
+    padding: 0 1.5em;
+    color: rgb(31, 34, 31);;
+  }
+
+  h2{
+    margin-top:1.5em;
+    text-align: left;
+    color: black;
+  }
+
+  .box{
+    margin-left: 2em;
+    margin-top:0.5em;
+    background: rgba(236, 170, 48, 0.753)
+  }
+  .box>p{
+    margin-top: 1.5em;
+    text-align: left;
+  }
+
+  .row>.b1,.b2{
+    height: 5.5em;
+  }
+
+  .container{
+    height: 40vh;
+  }
+  
+  .dContainer > .dd{
+    height: 1em;
+  }
+  .box > .dd{
+    height: 1em;
+  }
+  
+  .row{
+    height: 12em;
+  }
+
+  .ab{
+    height: 12em;
+  }
+  
+  .iform{
+    margin-top: 3.5em;
+    height: 5em;
+  }
+  
+  .btn{
+    width:5em;
+    margin-top:0.25em;
+    margin-left:4.5em;
+  }
+
+  .flexContainer{
+    display: flex;
+    height: 3.5em;
+    background-color:rgb(44, 143, 224);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .item1{
+  padding:1em;
+  color: rgb(31, 34, 31);
+  }
+  
+}
+
+@media all and (max-width:414px){
+  
+  .nav{
 
   }
 }
 
-@media all and (max-width:600px){
-  .row > div[class^='col'] {
-  height: 12em;
-  border: 1px solid rgb(161, 57, 57);
-  color: rgb(46, 167, 22);
-  margin-top:2em;
-
-  }
-}
-
-@media all and (max-width:500px){
-  .row > div[class^='col'] {
-  height: 8em;
-  border: 1px solid rgb(161, 57, 57);
-  color: rgb(46, 167, 22);
-  margin-top:2em;
-  }
-}
 
