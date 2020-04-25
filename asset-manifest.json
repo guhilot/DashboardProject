@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8d160792.chunk.css",
+    "main.js": "/static/js/main.5b8b001a.chunk.js",
+    "main.js.map": "/static/js/main.5b8b001a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.877efe94.js",
+    "runtime-main.js.map": "/static/js/runtime-main.877efe94.js.map",
+    "static/js/2.0ba4595f.chunk.js": "/static/js/2.0ba4595f.chunk.js",
+    "static/js/2.0ba4595f.chunk.js.map": "/static/js/2.0ba4595f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.12260d066b595ab8825d34c1c5c9ec5e.js": "/precache-manifest.12260d066b595ab8825d34c1c5c9ec5e.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.8d160792.chunk.css.map": "/static/css/main.8d160792.chunk.css.map",
+    "static/js/2.0ba4595f.chunk.js.LICENSE.txt": "/static/js/2.0ba4595f.chunk.js.LICENSE.txt",
+    "static/media/gold.jpg": "/static/media/gold.be841c07.jpg",
+    "static/media/palla.jpg": "/static/media/palla.d8d0e42a.jpg",
+    "static/media/platinum.jpg": "/static/media/platinum.3a682308.jpg",
+    "static/media/silver.jpg": "/static/media/silver.4fd9c9e3.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.877efe94.js",
+    "static/js/2.0ba4595f.chunk.js",
+    "static/css/main.8d160792.chunk.css",
+    "static/js/main.5b8b001a.chunk.js"
+  ]
+}
