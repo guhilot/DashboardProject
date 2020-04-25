@@ -5,11 +5,11 @@ function Navbar(){
     return(
         <div className="flex-container">
         <ul className="nav">
-          <Link to="/"><li>Home</li></Link>
-          <Link to="/currency"><li className="money">Currency</li></Link>
-          <Link to="/crypto"><li>Crypto Currency</li></Link>
-          <Link to="/metal"><li>Precious Metals</li></Link>
-          <Link to="/country"><li>Countries</li></Link>
+          <Link to="/"><li><i class="fa fa-2x fa-home"></i></li></Link>
+          <Link to="/currency"><li className="money"><h3><b>$</b></h3></li></Link>
+          <Link to="/crypto"><li><i class="fa fa-2x fa-bitcoin"></i></li></Link>
+          <Link to="/metal"><li><h3><b>Au</b></h3></li></Link>
+          <Link to="/country"><li><i class="fa fa-2x fa-globe"></i></li></Link>
         </ul>
       </div>
     )

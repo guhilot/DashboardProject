@@ -18,6 +18,9 @@ function ContextProvider(props){
     const [countryInfo, setCountryInfo] = useState([])
     const [flag, setFlag] = useState("")
     const [moreData, setMoreData] = useState([])
+    const [rate, setRate] = useState([])
+    const [currUrl, setCurrUrl] = useState()
+    const [metal, setMetal] = useState([])
 
     /**
      * url for fetching data
@@ -25,6 +28,10 @@ function ContextProvider(props){
 
     const countryAddr = "https://raw.githubusercontent.com/guhilot/pictures/master/country.json"
     const addr = "https://api.nomics.com/v1/currencies/ticker?key=demo-26240835858194712a4f8cc0dc635c7a&ids="
+    const currencyUrl = "https://currency-exchange.p.rapidapi.com/exchange?q="
+    const set2= "&from="
+    const set3= "&to="
+    const metalUrl = "https://gold-price-live.p.rapidapi.com/us-central1-metals-app.cloudfunctions.net/rapidapi_get_metal_prices"
 
     /**
      * 
@@ -36,11 +43,59 @@ function ContextProvider(props){
         let att = addr.concat(upper)
         setURL(att)
     }
+    /**
+     * 
+     * @param {*} nom gets the country name entered by user
+     */
 
     function processCountry(nom){
         let upper = nom.charAt(0).toUpperCase() + nom.slice(1)
         setCountry(upper)
     }
+
+    /**
+     * 
+     * @param {*} from gets the FROM currency to be converted from
+     * @param {*} to gets the To currency to be converted to
+     */
+    function getCurrency(Amt, From, To){
+        let upper1 = From.toUpperCase()
+        let upper2 = To.toUpperCase()
+        const currencyURL = currencyUrl + Amt + set2 + upper1 + set3 + upper2
+        console.log(currencyURL)
+        setCurrUrl(currencyURL)
+    }
+//https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=AUD&to=CAD&amount=1
+    useEffect(()=>{
+        fetch(currUrl, 
+        {
+	    "method": "GET",
+	    "headers": {
+		"x-rapidapi-host": "currency-converter5.p.rapidapi.com",
+		"x-rapidapi-key": "74582e3d89msh6a4a888a5292854p1d279cjsne4a41671a67f"
+	    }
+        })
+            .then(res=>res.json())
+            .then(data=>setRate(data))
+        },[currUrl])
+
+//https://gold-price-live.p.rapidapi.com/us-central1-metals-app.cloudfunctions.net/rapidapi_get_metal_prices
+
+        useEffect(()=>{
+            fetch(metalUrl, 
+                {
+                "method": "GET",
+                "headers": {
+                "x-rapidapi-host": "gold-price-live.p.rapidapi.com",
+                "x-rapidapi-key": "74582e3d89msh6a4a888a5292854p1d279cjsne4a41671a67f"
+                }
+            })
+            .then(res=>res.json())
+            .then(data=>setMetal(data))
+
+        },[])
+
+
     /**
      * exectues whenever there is a change to url to fetch new data
      */
@@ -49,6 +104,7 @@ function ContextProvider(props){
             .then(res=>res.json())
             .then(data=>setCoinData(data))
     },[url])
+
     /**
      * executes only once as it gets all country data
      */
@@ -57,39 +113,6 @@ function ContextProvider(props){
             .then(res=>res.json())
             .then(data=>setCountryData([data]))
     },[])
-
-    // const hold = countryData.map(region=>{
-    //     return region.Response.map((place,i)=>{
-    //         return { 
-    //                         "id": i,
-    //                         "Name":place.Name,
-    //                         "RegName":place.NativeName,
-    //                         "Lang":place.NativeLanguage,
-    //                         "Region":place.Region,
-    //                         "Lon":place.Longitude,
-    //                         "Lat":place.Latitude,
-    //                         "flag":place.Flag,
-    //                         "curr":place.CurrencyCode,
-    //                         "currSymbol":place.CurrencySymbol
-    //                 }       
-    //     })
-    // })
-
-    // const valData = countryData.map(city=>{
-    //     return(city.Response.map(place=>{
-    //         if(place.Name === country)
-    //         {
-    //             return (
-    //                 <div className="container">
-    //                     <h4>{place.Name}</h4>
-    //                     <h5>{place.Region}</h5>
-    //                 </div>
-                    
-    //             )
-    //         }
-    //     })
-    //     )
-    // })
 
     useEffect(()=>{
          setCountryInfo(countryData.map(place=>{
@@ -148,8 +171,6 @@ function ContextProvider(props){
               })
          )
     },[country])
-
-    
    
     /**
      * mapping over coin data to extract needed data using map for dispaly1
@@ -214,7 +235,10 @@ function ContextProvider(props){
             countryInfo,
             processCountry,
             flag,
-            moreData
+            moreData,
+            getCurrency,
+            rate,
+            metal
             }}>
             {props.children}
         </Context.Provider>
@@ -222,3 +246,19 @@ function ContextProvider(props){
 }
 
 export {ContextProvider, Context}
+
+    // const valData = countryData.map(city=>{
+    //     return(city.Response.map(place=>{
+    //         if(place.Name === country)
+    //         {
+    //             return (
+    //                 <div className="container">
+    //                     <h4>{place.Name}</h4>
+    //                     <h5>{place.Region}</h5>
+    //                 </div>
+                    
+    //             )
+    //         }
+    //     })
+    //     )
+    // })
