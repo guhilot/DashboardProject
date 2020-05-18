@@ -33,9 +33,19 @@ h2{
 }
 .box{
   margin-left: 4em;
-  margin-top:1em;
-  background: rgba(236, 170, 48, 0.753)
+  margin-top:3em;
+  background: rgba(236, 170, 48, 0.753);
 }
+
+.boxd{
+  margin-top:1em;
+  background: rgba(236, 170, 48, 0.753);
+  height: 3em;
+  
+}
+
+
+
 .box>p{
   margin-top: 3em;
   text-align: left;
@@ -79,6 +89,10 @@ h2{
   height: 10em;
 }
 
+.cen{
+  margin: 0 auto;
+}
+
 .btn{
   width:10em;
   margin-top:0.5em;
@@ -113,6 +127,17 @@ color: rgb(31, 34, 31);
 .img1{
   object-fit: cover;
   width: 100%;
+}
+
+.Ccontainer{
+  width: 25em;
+  margin: 0 auto;
+}
+
+.bz{
+  width:10em;
+  margin-top:0.5em;
+  margin-left:7.5em;
 }
 
 @media all and (max-width:991px){
@@ -211,6 +236,8 @@ color: rgb(31, 34, 31);
   }
   
 }
+
+
 
 
 @media all and (max-width:768px){

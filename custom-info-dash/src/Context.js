@@ -35,6 +35,8 @@ function ContextProvider(props){
            setCurrUrl] = useState("")
     const [metal, setMetal] = useState([])
     const [too, setToo] = useState("")
+
+   
     //const [arrRate, setArrRate] = useState([])
 
     /**
@@ -81,7 +83,6 @@ function ContextProvider(props){
         let upper1 = From.toUpperCase()
         let upper2 = To.toUpperCase()
         const currencyURL = currencyUrl + set2 + upper1 + set4 + Amt + set3 + upper2
-        console.log(currencyURL)
         setCurrUrl(currencyURL)
     }
 
@@ -100,12 +101,6 @@ function ContextProvider(props){
             .then(res=>res.json())
             .then(data=>setRate(data))
         },[currUrl])
-
-        
-
-        console.log("VVVV")
-        console.log(rate.amount)
-        console.log("AAAA")
      
     
 //https://gold-price-live.p.rapidapi.com/us-central1-metals-app.cloudfunctions.net/rapidapi_get_metal_prices
@@ -158,10 +153,18 @@ function ContextProvider(props){
                     return(
                         <div className="dContainer" >
                             <div className="row">
-                                <div className="col-sm-3 col-md-3 col-lg-3">{data.Region}</div>
-                                <div className="col-sm-3 col-md-3 col-lg-3">{data.Name}</div>
-                                <div className="col-sm-3 col-md-3 col-lg-3">{data.Longitude}</div>
-                                <div className="col-sm-3 col-md-3 col-lg-3">{data.Latitude}</div>
+                                <div className="col-sm-3 col-md-3 col-lg-3">
+                                    {data.Region}
+                                </div>
+                                <div className="col-sm-3 col-md-3 col-lg-3">
+                                    {data.Name}
+                                </div>
+                                <div className="col-sm-3 col-md-3 col-lg-3">
+                                    {data.Longitude}
+                                </div>
+                                <div className="col-sm-3 col-md-3 col-lg-3">
+                                    {data.Latitude}
+                                </div>
                             </div>
                         </div>
                     )
@@ -179,7 +182,13 @@ function ContextProvider(props){
                         return(
                             <div className="container" >
                                 <div className="row ab">
-                                    <div className="col-sm-12 col-md-12 col-lg-12 ab"><img className="ima" src={data.Flag} alt="flag" height={500} width={400} /></div>
+                                    <div className="col-sm-12 col-md-12 col-lg-12 ab">
+                                        <img className="ima" 
+                                        src={data.Flag} 
+                                        alt="flag" 
+                                        height={500} 
+                                        width={400} />
+                                    </div>
                                 </div>
                             </div>
                         )
@@ -217,6 +226,7 @@ function ContextProvider(props){
               })
          )
     },[country])
+
    
     /**
      * mapping over coin data to extract needed data using map for dispaly1
