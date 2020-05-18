@@ -15,16 +15,27 @@ function ContextProvider(props){
      * countryData: contains all the country stats
      */
 
-    const [url, setURL] = useState("")
-    const [coinData, setCoinData] = useState([])
-    const [country, setCountry] = useState("")
-    const [countryData, setCountryData] = useState([])
-    const [countryInfo, setCountryInfo] = useState([])
-    const [flag, setFlag] = useState("")
-    const [moreData, setMoreData] = useState([])
-    const [rate, setRate] = useState([])
-    const [currUrl, setCurrUrl] = useState()
+    const [url, 
+           setURL] = useState("")
+    const [coinData,
+           setCoinData] = useState([])
+    const [country,
+           setCountry] = useState("")
+    const [countryData, 
+           setCountryData] = useState([])
+    const [countryInfo, 
+           setCountryInfo] = useState([])
+    const [flag, 
+           setFlag] = useState("")
+    const [moreData, 
+           setMoreData] = useState([])
+    const [rate, 
+           setRate] = useState("")
+    const [currUrl, 
+           setCurrUrl] = useState("")
     const [metal, setMetal] = useState([])
+    const [too, setToo] = useState("")
+    //const [arrRate, setArrRate] = useState([])
 
     /**
      * url for fetching data
@@ -32,11 +43,14 @@ function ContextProvider(props){
 
     const countryAddr = "https://raw.githubusercontent.com/guhilot/pictures/master/country.json"
     const addr = "https://api.nomics.com/v1/currencies/ticker?key=demo-26240835858194712a4f8cc0dc635c7a&ids="
-    const currencyUrl = "https://currency-exchange.p.rapidapi.com/exchange?q="
-    const set2= "&from="
-    const set3= "&to="
-    const metalUrl = "//--block//https://gold-price-live.p.rapidapi.com/us-central1-metals-app.cloudfunctions.net/rapidapi_get_metal_prices"
+    const currencyUrl = "https://currencyconv.p.rapidapi.com/currency_conversion?"
+    const set2= "in="
+    const set3= "&out="
+    const set4= "&amount="
+    const metalUrl = "https://gold-price-live.p.rapidapi.com/us-central1-metals-app.cloudfunctions.net/rapidapi_get_metal_prices"
 
+
+    //"https://currency23.p.rapidapi.com/exchange?int=1&base=USD&to=INR"
     /**
      * 
      * @param {*} id gets the coin code from user input
@@ -63,41 +77,60 @@ function ContextProvider(props){
      * @param {*} to gets the To currency to be converted to
      */
     function getCurrency(Amt, From, To){
+        setToo(To.toUpperCase())
         let upper1 = From.toUpperCase()
         let upper2 = To.toUpperCase()
-        const currencyURL = currencyUrl + Amt + set2 + upper1 + set3 + upper2
+        const currencyURL = currencyUrl + set2 + upper1 + set4 + Amt + set3 + upper2
         console.log(currencyURL)
         setCurrUrl(currencyURL)
     }
-//https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=AUD&to=CAD&amount=1
-    useEffect(()=>{
-        fetch(currUrl, 
-        {
-	    "method": "GET",
-	    "headers": {
-		"x-rapidapi-host": "currency-converter5.p.rapidapi.com",
-		"x-rapidapi-key": "74582e3d89msh6a4a888a5292854p1d279cjsne4a41671a67f"
-	    }
-        })
+
+// use this
+//      [Log] https://currencyconv.p.rapidapi.com/currency_conversion?in=USD&amount=1&out=INR (main.chunk.js, line 329)
+//     fetch("https://currencyconv.p.rapidapi.com/currency_conversion?in=USD&amount=1&out=INR", {
+
+        useEffect(()=>{
+         fetch(currUrl, {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "currencyconv.p.rapidapi.com",
+                "x-rapidapi-key": "74582e3d89msh6a4a888a5292854p1d279cjsne4a41671a67f"
+                 }
+            })
             .then(res=>res.json())
             .then(data=>setRate(data))
         },[currUrl])
 
+        
+
+        console.log("VVVV")
+        console.log(rate.amount)
+        console.log("AAAA")
+     
+    
 //https://gold-price-live.p.rapidapi.com/us-central1-metals-app.cloudfunctions.net/rapidapi_get_metal_prices
 
-        useEffect(()=>{
-            fetch(metalUrl, 
-                {
-                "method": "GET",
-                "headers": {
-                "x-rapidapi-host": "gold-price-live.p.rapidapi.com",
-                "x-rapidapi-key": "74582e3d89msh6a4a888a5292854p1d279cjsne4a41671a67f"
-                }
-            })
-            .then(res=>res.json())
-            .then(data=>setMetal(data))
+// fetch("https://gold-price-live.p.rapidapi.com/get_metal_prices", {
+// 	"method": "GET",
+// 	"headers": {
+// 		"x-rapidapi-host": "gold-price-live.p.rapidapi.com",
+// 		"x-rapidapi-key": "74582e3d89msh6a4a888a5292854p1d279cjsne4a41671a67f"
+// 	}
+// })
 
-        },[])
+        // useEffect(()=>{
+        //     fetch(metalUrl, 
+        //         {
+        //         "method": "GET",
+        //         "headers": {
+        //         "x-rapidapi-host": "gold-price-live.p.rapidapi.com",
+        //         "x-rapidapi-key": "74582e3d89msh6a4a888a5292854p1d279cjsne4a41671a67f"
+        //         }
+        //     })
+        //     .then(res=>res.json())
+        //     .then(data=>setMetal(data))
+
+        // },[])
 
 
     /**
@@ -135,7 +168,8 @@ function ContextProvider(props){
                 }
                 return
             }))
-          })
+         })
+        
          )
 
          setFlag(
@@ -162,10 +196,18 @@ function ContextProvider(props){
                         return(
                             <div className="dContainer" >
                                 <div className="row">
-                                    <div className="col-sm-3 col-md-3 col-lg-3">{data.NativeLanguage}</div>
-                                    <div className="col-sm-3 col-md-3 col-lg-3">{data.NativeName}</div>
-                                    <div className="col-sm-3 col-md-3 col-lg-3">{data.CurrencyCode}</div>
-                                    <div className="col-sm-3 col-md-3 col-lg-3">{data.CurrencySymbol}</div>
+                                    <div className="col-sm-3 col-md-3 col-lg-3">
+                                        {data.NativeLanguage}
+                                    </div>
+                                    <div className="col-sm-3 col-md-3 col-lg-3">
+                                        {data.NativeName}
+                                    </div>
+                                    <div className="col-sm-3 col-md-3 col-lg-3">
+                                        {data.CurrencyCode}
+                                    </div>
+                                    <div className="col-sm-3 col-md-3 col-lg-3">
+                                        {data.CurrencySymbol}
+                                    </div>
                                 </div>
                             </div>
                         )

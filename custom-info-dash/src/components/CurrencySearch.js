@@ -9,8 +9,9 @@ function CurrencySearch(){
 
     const [currency, setCurrency] = useState({amt:"",From:"", To:""})
 
-    const {getCurrency} = useContext(Context)
-
+    const {getCurrency,rate} = useContext(Context)
+     
+   
     function handleChange(e){
         e.preventDefault()
         const {value, name} = e.target
@@ -57,7 +58,6 @@ function CurrencySearch(){
                         <button className="btn btn-primary">Convert</button>
                     </form>
                 </div>
-
             </div>
 
         </div>
