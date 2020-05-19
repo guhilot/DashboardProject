@@ -186,7 +186,7 @@ function ContextProvider(props){
                 return(place.Response.map(data=>{
                     if(data.Name === country){
                         return(
-                            <div className="container" >
+                            <div className="dcontainer" >
                                 <div className="row ab">
                                     <div className="col-sm-12 col-md-12 col-lg-12 ab">
                                         <img className="ima" 

@@ -27,12 +27,12 @@ function Country(){
             </div>
             <div className="row dd">
                 <div className="col-lg-5 box">
-                    <div className="row dd">
+                <div className="row dd">
                         <div className="col-sm-3 col-md-3 col-lg-3">Language</div>
                         <div className="col-sm-3 col-md-3 col-lg-3">LclName</div>
                         <div className="col-sm-3 col-md-3 col-lg-3">Currency</div>
                         <div className="col-sm-3 col-md-3 col-lg-3">Symbol</div>
-                    </div>
+                </div>
                     {moreData}
                 </div>
                 <div className="col-lg-5 box box1">{flag}</div>
