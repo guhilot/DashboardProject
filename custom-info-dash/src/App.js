@@ -10,7 +10,7 @@ import Crypto from "./pages/Crypto"
 import Metal from "./pages/Metal"
 import Country from "./pages/Country"
 import Home from "./pages/Home"
-import Footer from "./components/Footer"
+//import Footer from "./components/Footer"
 
 
 function App() {
@@ -24,9 +24,12 @@ function App() {
         <Route path="/metal"><Metal /></Route>
         <Route path="/country"><Country /></Route>
       </Switch>
-      <Footer/>
+      
     </div>
   );
 }
 
 export default App;
+
+
+//<Footer/>

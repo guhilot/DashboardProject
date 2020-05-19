@@ -2,7 +2,7 @@
  * Vikram Guhilot
  */
 
-body{
+ body{
   margin:0;
   background-color: antiquewhite;
 }
@@ -139,6 +139,7 @@ color: rgb(31, 34, 31);
   margin-top:0.5em;
   margin-left:7.5em;
 }
+
 
 @media all and (max-width:991px){
 
