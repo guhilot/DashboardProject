@@ -10,7 +10,7 @@ import '../App.css';
 function Crypto(){
 
     const {newCoinData, moreCoinData, extraData} = useContext(Context)
-
+    //console
     return(
         <div className="container">
             <div className="row">
