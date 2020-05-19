@@ -49,8 +49,7 @@ function ContextProvider(props){
     const set2= "in="
     const set3= "&out="
     const set4= "&amount="
-    const metalUrl = "https://gold-price-live.p.rapidapi.com/us-central1-metals-app.cloudfunctions.net/rapidapi_get_metal_prices"
-
+    const metalUrl = "https://raw.githubusercontent.com/guhilot/metals/master/metals.json"
 
     //"https://currency23.p.rapidapi.com/exchange?int=1&base=USD&to=INR"
     /**
@@ -101,7 +100,13 @@ function ContextProvider(props){
             .then(res=>res.json())
             .then(data=>setRate(data))
         },[currUrl])
-     
+
+        useEffect(()=>{
+            fetch(metalUrl)
+                .then(res=>res.json())
+                .then(data=>setMetal(data))
+        },[metalUrl])
+ 
     
 //https://gold-price-live.p.rapidapi.com/us-central1-metals-app.cloudfunctions.net/rapidapi_get_metal_prices
 
@@ -131,6 +136,7 @@ function ContextProvider(props){
     /**
      * exectues whenever there is a change to url to fetch new data
      */
+
     useEffect(()=>{
         fetch(url)
             .then(res=>res.json())
