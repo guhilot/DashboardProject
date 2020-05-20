@@ -420,7 +420,6 @@ color: rgb(31, 34, 31);
   }
 
  .box{
-  
    width: 20em;
  }
  .fm1{
@@ -745,7 +744,7 @@ color: rgb(31, 34, 31);
   }
 
   .dd6, .dd7{
-    width: 27em;
+    width: 28em;
    
   }
 
@@ -755,22 +754,33 @@ color: rgb(31, 34, 31);
   }
   .boxd{
    
-    width: 20em;
+    width: 22em;
   }
 
   .box{
     margin: 0.05em;
-    background: red;
+    background:rgba(236, 170, 48, 0.753);
     justify-content: center;
     align-items: center;
-    width: 10em;
+    width: 11em;
   }
 /*
 rgba(236, 170, 48, 0.753);
 */
   .img1{
-    width: 200px;
-    height: 60px;
+    width: 150px;
+    height: 70px;
+  }
+
+  .b1{
+    width: 13ßem;
+  }
+
+  .fm1{
+    width:13em;
+  }
+  .bpad{
+    margin-left: 3em;
   }
 
 }
