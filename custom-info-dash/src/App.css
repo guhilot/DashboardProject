@@ -760,12 +760,14 @@ color: rgb(31, 34, 31);
 
   .box{
     margin: 0.05em;
-    background: rgba(236, 170, 48, 0.753);
+    background: red;
     justify-content: center;
     align-items: center;
     width: 10em;
   }
-
+/*
+rgba(236, 170, 48, 0.753);
+*/
   .img1{
     width: 200px;
     height: 60px;
