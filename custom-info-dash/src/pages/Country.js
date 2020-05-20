@@ -19,8 +19,8 @@ function Country(){
                     <div className="row dd">
                         <div className="col-sm-3 col-md-3 col-lg-3">Region</div>
                         <div className="col-sm-3 col-md-3 col-lg-3">Country</div>
-                        <div className="col-sm-3 col-md-3 col-lg-3">Longitude</div>
-                        <div className="col-sm-3 col-md-3 col-lg-3">Latitude</div>
+                        <div className="col-sm-3 col-md-3 col-lg-3 del1">Longitude</div>
+                        <div className="col-sm-3 col-md-3 col-lg-3 del1">Latitude</div>
                     </div>
                     {countryInfo}
                 </div>
@@ -30,8 +30,8 @@ function Country(){
                 <div className="row dd">
                         <div className="col-sm-3 col-md-3 col-lg-3">Language</div>
                         <div className="col-sm-3 col-md-3 col-lg-3">LclName</div>
-                        <div className="col-sm-3 col-md-3 col-lg-3">Currency</div>
-                        <div className="col-sm-3 col-md-3 col-lg-3">Symbol</div>
+                        <div className="col-sm-3 col-md-3 col-lg-3 del1">Currency</div>
+                        <div className="col-sm-3 col-md-3 col-lg-3 del1">Symbol</div>
                 </div>
                     {moreData}
                 </div>

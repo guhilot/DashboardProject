@@ -54,6 +54,7 @@ h2{
   object-fit: contain;
   max-width: 100%;
   max-height: 100%; 
+  margin-top: 1.25em;
 }
 
 .row>.b1,.b2{
@@ -144,6 +145,10 @@ color: rgb(31, 34, 31);
 
 @media all and (max-width:987px){
 
+  .del1{
+    display: none;
+  }
+
   .nav{
     display: flex;
     background: rgb(44, 143, 224);
@@ -202,6 +207,8 @@ color: rgb(31, 34, 31);
     object-fit: contain;
     max-width: 100%;
     max-height: 100%; 
+    width: 18em;
+    
   }
   
   .row{
@@ -361,6 +368,13 @@ color: rgb(31, 34, 31);
     object-fit: contain;
     max-width: 100%;
     max-height: 100%; 
+    margin-top: 1.25em;
+    height: 9em;
+    width: 18em;
+  }
+
+  .del1{
+    display: none;
   }
 
   .img1{

@@ -165,10 +165,10 @@ function ContextProvider(props){
                                 <div className="col-sm-3 col-md-3 col-lg-3">
                                     {data.Name}
                                 </div>
-                                <div className="col-sm-3 col-md-3 col-lg-3">
+                                <div className="col-sm-3 col-md-3 col-lg-3 del1">
                                     {data.Longitude}
                                 </div>
-                                <div className="col-sm-3 col-md-3 col-lg-3">
+                                <div className="col-sm-3 col-md-3 col-lg-3 del1">
                                     {data.Latitude}
                                 </div>
                             </div>
@@ -192,8 +192,7 @@ function ContextProvider(props){
                                         <img className="ima" 
                                         src={data.Flag} 
                                         alt="flag" 
-                                        height={500} 
-                                        width={400} />
+                                         />
                                     </div>
                                 </div>
                             </div>
@@ -214,10 +213,10 @@ function ContextProvider(props){
                                     <div className="col-sm-3 col-md-3 col-lg-3">
                                         {data.NativeLanguage}
                                     </div>
-                                    <div className="col-sm-3 col-md-3 col-lg-3">
+                                    <div className="col-sm-3 col-md-3 col-lg-3 del1">
                                         {data.NativeName}
                                     </div>
-                                    <div className="col-sm-3 col-md-3 col-lg-3">
+                                    <div className="col-sm-3 col-md-3 col-lg-3 del1">
                                         {data.CurrencyCode}
                                     </div>
                                     <div className="col-sm-3 col-md-3 col-lg-3">
