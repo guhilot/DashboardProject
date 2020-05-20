@@ -731,8 +731,8 @@ color: rgb(31, 34, 31);
     width: 10em;
   }
   .cnbtn{
-    width: 4.5em;
-    margin-left: 3.5em;
+    width: 3.5em;
+    margin-left: 2.5em;
   }
 
     /*
@@ -745,7 +745,7 @@ color: rgb(31, 34, 31);
   }
 
   .dd6, .dd7{
-    width: 23em;
+    width: 25em;
    
   }
 
@@ -756,6 +756,14 @@ color: rgb(31, 34, 31);
   .boxd{
    
     width: 20em;
+  }
+
+  .box{
+    margin: 0.05em;
+    background: rgba(236, 170, 48, 0.753);
+    justify-content: center;
+    align-items: center;
+    width: 12.9em;
   }
 
 }
