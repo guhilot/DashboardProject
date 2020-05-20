@@ -728,11 +728,11 @@ color: rgb(31, 34, 31);
   country
   */
   .cntxt{
-    width: 10em;
+    width: 11em;
   }
   .cnbtn{
-    width: 3.5em;
-    margin-left: 2.5em;
+    width: 5em;
+    margin-left: 3em;
   }
 
     /*
@@ -745,7 +745,7 @@ color: rgb(31, 34, 31);
   }
 
   .dd6, .dd7{
-    width: 25em;
+    width: 27em;
    
   }
 
@@ -763,7 +763,12 @@ color: rgb(31, 34, 31);
     background: rgba(236, 170, 48, 0.753);
     justify-content: center;
     align-items: center;
-    width: 12.9em;
+    width: 10em;
+  }
+
+  .img1{
+    width: 200px;
+    height: 60px;
   }
 
 }
