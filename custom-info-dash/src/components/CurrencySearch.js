@@ -38,7 +38,7 @@ function CurrencySearch(){
                         name="amt"
                         value={currency.amt}
                         onChange={handleChange}
-                        className="form-control"
+                        className="form-control cf1"
                         />
                         <input 
                         type="text"
@@ -46,7 +46,7 @@ function CurrencySearch(){
                         name="From"
                         value={currency.From}
                         onChange={handleChange}
-                        className="form-control"
+                        className="form-control cf1"
                         />
                         <input 
                         type="text"
@@ -54,7 +54,7 @@ function CurrencySearch(){
                         name="To"
                         value={currency.To}
                         onChange={handleChange}
-                        className="form-control"
+                        className="form-control cf1"
                         />
                         <button className="bz btn btn-primary">
                             Convert
@@ -63,7 +63,7 @@ function CurrencySearch(){
                 </div>
             </div>
 
-            <div className="row dd6">
+            <div className="row dd7">
                 <div className="col-sm-12 col-md-12 col-lg-12 boxd">
                     <h2 className="cen">{rate.amount}</h2>
                 </div>

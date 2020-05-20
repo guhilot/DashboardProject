@@ -37,9 +37,9 @@ function Search(){
                         value={coin.Coin}
                         placeholder="Enter crypto code ex. LTC, BTC"
                         onChange = {handleChange}
-                        className="form-control"
+                        className="form-control fm1"
                         />
-                        <button className="btn btn-primary">Search</button>
+                        <button className="btn btn-primary bpad">Search</button>
                     </form>
                 </div>
             </div>

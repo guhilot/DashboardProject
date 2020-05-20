@@ -41,12 +41,11 @@ function Metal(){
                 <div className="col-sm-5 col-md-5 col-lg-5 box">
                     <div className = "row">
                         <div className = "col-lg-12 b1">
-                            <h1>{gold}</h1>
+                            <h1 className="mPrice">{gold}</h1>
                         </div>
                         <div className = "col-lg-12 b2">
                             <img 
                             className="img1"
-                            height={130} width={450}
                             src={require('/Users/vikramguhilot/Desktop/DashboardProject/custom-info-dash/src/pages/gold.jpg') } 
                             alt="gold"/>
                         </div>
@@ -55,12 +54,11 @@ function Metal(){
                 <div className="col-sm-5 col-md-5 col-lg-5 box">
                     <div className = "row">
                         <div className = "col-lg-12 b1">
-                            <h1>{silver}</h1>
+                            <h1 className="mPrice">{silver}</h1>
                         </div>
                         <div className = "col-lg-12 b2">
                         <img 
                             className="img1"
-                            height={130} width={450}
                             src={require('/Users/vikramguhilot/Desktop/DashboardProject/custom-info-dash/src/pages/silver.jpg') } 
                             alt="silver"/>
                         </div>
@@ -71,12 +69,11 @@ function Metal(){
                 <div className="col-sm-5 col-md-5 col-lg-5 box">
                     <div className = "row">
                         <div className = "col-lg-12 b1">
-                            <h1>{platinum}</h1>
+                            <h1 className="mPrice">{platinum}</h1>
                         </div>
                         <div className = "col-lg-12 b2">
                         <img 
                             className="img1"
-                            height={130} width={450}
                             src={require('/Users/vikramguhilot/Desktop/DashboardProject/custom-info-dash/src/pages/platinum.jpg') } 
                             alt="platinum"/>
                         </div>
@@ -85,12 +82,11 @@ function Metal(){
                 <div className="col-sm-5 col-md-5 col-lg-5 box">
                     <div className = "row">
                         <div className = "col-lg-12 b1">
-                            <h1>{palladium}</h1>
+                            <h1 className="mPrice">{palladium}</h1>
                         </div>
                         <div className = "col-lg-12 b2">
                         <img 
                             className="img1"
-                            height={130} width={450}
                             src={require('/Users/vikramguhilot/Desktop/DashboardProject/custom-info-dash/src/pages/palla.jpg') } 
                             alt="pallidum"/>
                         </div>

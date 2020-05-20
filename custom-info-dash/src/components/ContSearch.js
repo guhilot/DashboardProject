@@ -37,9 +37,9 @@ function ContSearch(){
                         name="Name"
                         value={country.Name}
                         onChange={handleChange}
-                        className="form-control"
+                        className="form-control cntxt"
                         />
-                        <button className="btn btn-primary">Get Info</button>
+                        <button className="btn btn-primary cnbtn">Get Info</button>
                     </form>
                 </div>
 

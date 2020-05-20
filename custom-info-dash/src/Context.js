@@ -241,9 +241,9 @@ function ContextProvider(props){
         return(
             <div className="dContainer" key={coin.name}>
                 <div className="row dd">
-                    <div className="col-sm-2 "><img src={coin.logo_url} alt="Coin logo" height={30} width={30}/></div>
-                    <div className="col-sm-6 ">$ {coin.price}</div>
-                    <div className="col-sm-4 ">{coin.name}</div>
+                    <div className="col-sm-2 logo"><img src={coin.logo_url} alt="Coin logo" height={30} width={30}/></div>
+                    <div className="col-sm-6 price">$ {coin.price}</div>
+                    <div className="col-sm-4 name">{coin.name}</div>
                 </div>
             </div>
         )
@@ -256,10 +256,10 @@ function ContextProvider(props){
       return(
             <div className="dContainer" key={coin.name}>
                 <div className="row dd">
-                    <div className="col-sm-1 ">{coin.id}</div>
-                    <div className="col-sm-5 ">{coin.max_supply}</div>
-                    <div className="col-sm-4 ">{coin.circulating_supply}</div>
-                    <div className="col-sm-2 ">{coin.rank}</div>
+                    <div className="col-sm-1 id">{coin.id}</div>
+                    <div className="col-sm-5 s1">{coin.max_supply}</div>
+                    <div className="col-sm-4 s1">{coin.circulating_supply}</div>
+                    <div className="col-sm-2 rank">{coin.rank}</div>
                 </div>
         </div>
       )
