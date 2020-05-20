@@ -727,11 +727,11 @@ color: rgb(31, 34, 31);
   country
   */
   .cntxt{
-    width: 11em;
+    width: 10em;
   }
   .cnbtn{
     width: 5em;
-    margin-left: 3em;
+    margin-left: 2.5em;
   }
 
     /*
@@ -773,14 +773,14 @@ rgba(236, 170, 48, 0.753);
   }
 
   .b1{
-    width: 13ßem;
+    width: 10em;
   }
 
   .fm1{
-    width:13em;
+    width:10em;
   }
   .bpad{
-    margin-left: 3em;
+    margin-left: 2.5em;
   }
 
 }
