@@ -723,4 +723,41 @@ color: rgb(31, 34, 31);
 
 }
 
+@media all and (max-width:360px){
+  /*
+  country
+  */
+  .cntxt{
+    width: 10em;
+  }
+  .cnbtn{
+    width: 4.5em;
+    margin-left: 3.5em;
+  }
+
+    /*
+    Currency
+  */
+
+  .cf1{
+    width: 20em;
+   
+  }
+
+  .dd6, .dd7{
+    width: 23em;
+   
+  }
+
+  .bz{
+    margin-left: 7em;
+    margin-top: .1em;
+  }
+  .boxd{
+   
+    width: 20em;
+  }
+
+}
+
 
