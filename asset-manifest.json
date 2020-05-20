@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/DashboardProject/static/css/main.e3ef66cb.chunk.css",
+    "main.css": "/DashboardProject/static/css/main.f8e29e4b.chunk.css",
     "main.js": "/DashboardProject/static/js/main.b709e241.chunk.js",
     "main.js.map": "/DashboardProject/static/js/main.b709e241.chunk.js.map",
     "runtime-main.js": "/DashboardProject/static/js/runtime-main.55d9038e.js",
@@ -8,9 +8,9 @@
     "static/js/2.0ba4595f.chunk.js": "/DashboardProject/static/js/2.0ba4595f.chunk.js",
     "static/js/2.0ba4595f.chunk.js.map": "/DashboardProject/static/js/2.0ba4595f.chunk.js.map",
     "index.html": "/DashboardProject/index.html",
-    "precache-manifest.992bed5783cab6fcad292f330d9e2dba.js": "/DashboardProject/precache-manifest.992bed5783cab6fcad292f330d9e2dba.js",
+    "precache-manifest.cbeb3718ab36d366e057531d890b1927.js": "/DashboardProject/precache-manifest.cbeb3718ab36d366e057531d890b1927.js",
     "service-worker.js": "/DashboardProject/service-worker.js",
-    "static/css/main.e3ef66cb.chunk.css.map": "/DashboardProject/static/css/main.e3ef66cb.chunk.css.map",
+    "static/css/main.f8e29e4b.chunk.css.map": "/DashboardProject/static/css/main.f8e29e4b.chunk.css.map",
     "static/js/2.0ba4595f.chunk.js.LICENSE.txt": "/DashboardProject/static/js/2.0ba4595f.chunk.js.LICENSE.txt",
     "static/media/gold.jpg": "/DashboardProject/static/media/gold.be841c07.jpg",
     "static/media/palla.jpg": "/DashboardProject/static/media/palla.d8d0e42a.jpg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.55d9038e.js",
     "static/js/2.0ba4595f.chunk.js",
-    "static/css/main.e3ef66cb.chunk.css",
+    "static/css/main.f8e29e4b.chunk.css",
     "static/js/main.b709e241.chunk.js"
   ]
 }
