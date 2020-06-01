@@ -20,7 +20,7 @@ function Search(){
         })
 
     }
-    console.log(coin.Coin)
+    
     function handleSubmit(e){
         e.preventDefault()
         processCode(coin.Coin)

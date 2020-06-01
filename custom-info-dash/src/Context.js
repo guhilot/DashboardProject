@@ -15,24 +15,15 @@ function ContextProvider(props){
      * countryData: contains all the country stats
      */
 
-    const [url, 
-           setURL] = useState("")
-    const [coinData,
-           setCoinData] = useState([])
-    const [country,
-           setCountry] = useState("")
-    const [countryData, 
-           setCountryData] = useState([])
-    const [countryInfo, 
-           setCountryInfo] = useState([])
-    const [flag, 
-           setFlag] = useState("")
-    const [moreData, 
-           setMoreData] = useState([])
-    const [rate, 
-           setRate] = useState("")
-    const [currUrl, 
-           setCurrUrl] = useState("")
+    const [url, setURL] = useState("")
+    const [coinData,setCoinData] = useState([])
+    const [country,setCountry] = useState("")
+    const [countryData, setCountryData] = useState([])
+    const [countryInfo, setCountryInfo] = useState([])
+    const [flag, setFlag] = useState("")
+    const [moreData, setMoreData] = useState([])
+    const [rate, setRate] = useState("")
+    const [currUrl, setCurrUrl] = useState("")
     const [metal, setMetal] = useState([])
     const [too, setToo] = useState("")
 
@@ -247,7 +238,7 @@ function ContextProvider(props){
             </div>
         )
     })
-
+    
     /**
      * mapping over coin data to extract needed data using map for display2
      */
