@@ -127,11 +127,30 @@ function ContextProvider(props){
     /**
      * exectues whenever there is a change to url to fetch new data
      */
+    
+    function cointoss(coin){
+        setCoinData((prev)=>{
+            
+            if(prev === undefined || prev.length == 0){
+                console.log("ok")
+                return coin
+            }else{
+                console.log("yeah")
+                for(let i=0;i<coin.length;++i)
+                {
+                    prev = [...prev,coin[i]]
+                }
+                return prev
+            }
+        })
 
+        console.log(coinData)
+    }
+    console.log(coinData)
     useEffect(()=>{
         fetch(url)
             .then(res=>res.json())
-            .then(data=>setCoinData(data))
+            .then(data=>cointoss(data))
     },[url])
 
     /**

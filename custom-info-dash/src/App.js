@@ -24,7 +24,7 @@ function App() {
         <Route path="/metal"><Metal /></Route>
         <Route path="/country"><Country /></Route>
       </Switch>
-      
+    
     </div>
   );
 }
